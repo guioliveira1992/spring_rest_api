@@ -42,7 +42,7 @@ public class Funcionario implements Serializable{
 	private Date dataCriacao;
 	private Date dataAtualizacao;
 	private Empresa empresa;
-	private List<Lancamento> lancamentoList;
+	//private List<Lancamento> lancamentoList;
 	
 	
 	@Id
@@ -171,6 +171,7 @@ public class Funcionario implements Serializable{
 		this.empresa = empresa;
 	}
 	
+/*	
 	// mapeando uma collection para uma entity/tabela, FETCH garante que não são todos os funcionários que serão
 	// carregados ao instanciar um objeto "empresa" e o Cascade para fazer o efeito "cascatas" nas alterações
 	// realizadas na empresa para os funcionários
@@ -181,6 +182,7 @@ public class Funcionario implements Serializable{
 	public void setLancamentoList(List<Lancamento> lancamentoList) {
 		this.lancamentoList = lancamentoList;
 	}
+*/	
 	
 	/*
 	 * Garante que a data será atualizada assim que o objeto "empresa" for criado
