@@ -162,6 +162,7 @@ public class Funcionario implements Serializable{
 
 	/*
 	 * FetchType.EAGER -> Garante que os dados da empresa serão carregados assim que o objeto for instanciado
+	 * N Funcionario para 1 empresa
 	 */
 	@ManyToOne(fetch = FetchType.EAGER)
 	public Empresa getEmpresa() {
@@ -174,6 +175,7 @@ public class Funcionario implements Serializable{
 	// mapeando uma collection para uma entity/tabela, FETCH garante que não são todos os funcionários que serão
 	// carregados ao instanciar um objeto "empresa" e o Cascade para fazer o efeito "cascatas" nas alterações
 	// realizadas na empresa para os funcionários
+	// 1 Funcionario para N lançamentos
 	@OneToMany(mappedBy = "funcionario", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	public List<Lancamento> getLancamentoList() {
 		return lancamentoList;
